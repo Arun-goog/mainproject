@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: rgb(184, 181, 179);">
+
+    <nav class="navbar navbar-expand-md  " id="navStyle">
+        <a class="navbar-brand" href='/'>Home</a>                            
+    </nav>
+    
+    <div class="row" id="signinformContainer" >
+        <div id="formImage">
+            
+        </div>
+
+        <div id="signinform">
+            <h2>Member Login</h2>
+            <form name="formin"action="/signindata" onsubmit="return submitSignin()"> 
+                 
+                <div id="signinInput">
+                    <i style="float: left;" class="fa fa-fw fa-user"></i>
+                    <input required   type="email" placeholder="example@gmail.com" onchange="email_validate_signin(this.value);">
+                    <i id="usernameCorrect" class="fa fa-fw fa-check-circle"></i>
+                    <i id="usernameWrong" class="fa fa-fw fa-times-circle"></i>    
+                </div>
+                <div id="signinInput">
+                    <i style="float: left;" class="fa fa-fw fa-lock"></i>
+                    <input required  type="password" placeholder="Password" onchange="signinPasswordcheck(this);"> 
+                    <i id="signinCorrect" class="fa fa-fw fa-check-circle"></i>
+                    <i id="signinWrong" class="fa fa-fw fa-times-circle"></i> 
+                </div>                     
+                <div class="form-check forgot-link d-flex alidn-item-center ">
+                    <input required type="checkbox" class="form-check-input" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="text-center p-t-12">
+                <span class="txt1">Forgot</span>
+                <a class="txt2" href="#"> Username / Password?</a>
+            </div>
+         
+            <div id="regLink">
+                <h6>Or</h6>
+                <a href="#">Register here</a>
+            </div>
+
+
+        </div>
+
+    </div>
+    
+        
+    <footer>
+        <h2>Follow Us</h2>
+        <div class="follow">
+            <div class="sociallink" style="background-color: rgb(105, 163, 238);"><a href="#">Twitter</a></div>
+            <div class="sociallink" style="background-color: darkblue;"><a href="#">Facebook</a></div>
+            <div class="sociallink" style="background-color: rgb(231, 15, 15);"><a href="#">Google+</a></div>
+        </div>
+    </footer>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
