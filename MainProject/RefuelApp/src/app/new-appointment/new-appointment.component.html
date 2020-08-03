@@ -1,0 +1,82 @@
+<div class='card'>
+    <form (ngSubmit)="AddAppointment()">
+        <div class='card-header'>
+            {{title}}
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+
+                        <tr>
+                            <td><label>Name</label></td>
+                            <td class="row"><input type="text" name="a_name" [(ngModel)] ="appointmentItem.name"  placeholder="Enter yourName"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Mobile Number</label></td>
+                            <td class="row"><input type="text" name="a_numb" [(ngModel)] ="appointmentItem.phoneNumber" placeholder="Enter yourNumber"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Place</label></td>
+                            <td class="row"><input type="text" name="a_age" [(ngModel)] ="appointmentItem.age"placeholder="Enter orderPlace"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Date </label></td>
+                            <!-- <td><input type="date" name="a_date" [(ngModel)] ="appointmentItem.date" required ></td> -->
+                           <td class="row">
+                            <input type="text" id="adate"
+                            placeholder="Choose orderDate"
+                            [minDate]="minDate"
+                            [maxDate]="maxDate"
+                             name="a_date" [(ngModel)] ="appointmentItem.date" required
+                            bsDatepicker>
+                           </td> 
+                        </tr>
+
+                        <!-- <tr>
+                            <td><label>Place</label></td>
+                            <td><input type="text" name="a_place" [(ngModel)] ="appointmentItem.place"/></td>
+                        </tr> -->
+                        <tr>
+                            <td><label>Fuel</label></td>
+                            <td class="row">
+                                <select name="a-dep" class="form-control" [(ngModel)] ="appointmentItem.place" >
+                                    <option value="null">Choose fuelType</option>
+                                    <option value="{{item.ids}}" *ngFor="let item of department_values">
+                                        {{item.labels}}
+                                    </option>
+                                  </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Fuel Staion</label></td>
+                            <td class="row" >
+                                <select name="a-slot" class="form-control" [(ngModel)] ="appointmentItem.slot" >
+                                    <option  value="null">Choose fuelStation</option>
+                                    <option value="{{item.id}}" *ngFor="let item of slot_values">
+                                        {{item.label}}
+                                    </option>
+                                  </select>
+                            </td>
+                        </tr>
+
+                        
+
+                        
+                        
+                        
+                        
+                        <tr>
+                            <td></td>
+                            <td><button class="btn btn-custom">Submit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div>

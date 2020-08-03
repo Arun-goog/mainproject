@@ -1,0 +1,42 @@
+
+.card{
+    background-color: rgb(71, 75, 75);
+    color: white;
+}
+
+.card-header{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 2.5%;
+}
+
+.thead-custom{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    color: darkgray;
+    background-color: rgba(13, 1, 19, 0.8);
+    
+}
+
+td{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    font-size: 17px;
+    color: rgb(1, 5, 19);
+    background-color: rgb(247, 248, 248);
+}
+
+.btn-custom1{
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(252, 248, 248);
+    background-color: #050596;
+    text-align: center;
+}
+.btn-custom2{
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(252, 248, 248);
+    background-color: #960505;
+    text-align: center;
+}
